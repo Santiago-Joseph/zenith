@@ -1,12 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Route, withRouter } from 'react-router-dom';
+import LandingNavMobile from './components/navbar/landingNavMobile';
+import LandingPage from './components/landingPages/landingPage';
 import './stylesheets/App.css';
+import LandingNavbar from './components/navbar/landingNavMobile';
 
 function App() {
   return (
     <div className="App">
-        <h1>Dev Branch has been added</h1>
-        <h1>Installed axios and react-router-dom</h1>
+      <LandingNavMobile/>
+      <Route exact path="/" component={LandingPage}/>
     </div>
   );
 }
