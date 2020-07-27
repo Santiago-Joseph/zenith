@@ -1,0 +1,92 @@
+
+.navList{
+  position: absolute;
+
+  visibility: hidden;
+  transition: ease-in .2s;
+  width: 100%;
+  height: 92%;
+  background-color: rgba(0,0,0,.2);
+  opacity: 0;
+  /* transition: ease-in .2s; */
+
+}
+.navListContainer{
+  border-top-left-radius: 1%;
+  border-bottom-left-radius: 1%;
+  /* position: relative; */
+  transition: ease-in-out 0.4s;
+  transform: translateX(100%);
+  transition: ease-in-out 0.4s;
+  margin-left: 15%;
+  width: 85%;
+  height: 100%;
+  background-color: white;
+}
+.navListContainer *{
+  text-decoration: none;
+  list-style-type: none;
+  padding: 5%;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.navListContainer *:hover{
+  background-color: rgba(255,255,255,.7);
+}
+
+.toggleItems{
+  transform: translateX(0%);
+  transition-duration: 3s;
+}
+
+.fadeInList{
+  /* display: block; */
+  visibility: visible;
+  opacity: 1;
+  animation: fade .5s;
+}
+.fadeOutList{
+  /* display: none; */
+
+  animation: fadeOut .5s;
+}
+.slide-in {
+  animation: slide-in 0.2s forwards;
+
+}
+
+.slide-out {
+  animation: slide-out 0.2s forwards;
+
+}
+
+@keyframes slide-in {
+
+  100% { transform: translateX(0%); }
+}
+  
+@keyframes slide-out {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(100%); }
+}
+@keyframes fade{
+    0% {
+     
+        opacity: 0;
+    }
+    100%{
+
+        opacity: 1;
+     
+    }
+}
+/* @keyframes fadeOut{
+  0% {
+      opacity: 1;
+  }
+  100%{
+      opacity: 0;
+      visibility: hidden;
+    
+  }
+} */
